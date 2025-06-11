@@ -1,5 +1,5 @@
 import React from "react";
-import blogPosts from "../../data/Blog.json";
+import blogPosts from "../../Data/Blog.json";
 import { Link } from "react-router-dom";
 
 function BlogGrid() {
