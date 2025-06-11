@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import HeroText from './HeroText';
 import ProductGallery from './ProductGallery';
 

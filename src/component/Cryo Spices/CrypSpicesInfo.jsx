@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import cryoSpicesImg from '../../assets/Cry1.jpg'; // Your image import
 
 function CrypSpicesInfo() {

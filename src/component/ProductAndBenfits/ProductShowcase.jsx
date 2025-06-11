@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 
 const ProductShowcase = ({ products }) => (
   <section className="py-16 bg-gray-50">

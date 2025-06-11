@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import faqHeroImg from '../../assets/P&B1.jpg';
 import FAQAccordion from './FAQAccordion';
 import HeroSection from '../ProductAndBenfits/HeroSection';

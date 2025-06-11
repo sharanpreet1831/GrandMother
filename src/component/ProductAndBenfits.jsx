@@ -1,4 +1,3 @@
-import React from 'react';
 import HeroSection from './ProductAndBenfits/HeroSection';
 import BenefitsSection from './ProductAndBenfits/BenefitsSection';
 

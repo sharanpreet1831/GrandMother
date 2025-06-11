@@ -1,5 +1,3 @@
-import React from 'react';
-
 function ContactInfo() {
   return (
     <div className="flex-1 w-full max-w-[35%] md:max-w-full bg-[#1a1a1a] text-white p-8 rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.15)] animate-fade-in">

@@ -1,4 +1,3 @@
-import React from 'react';
 import ProductItem from './ProductItem';
 import butterChickenImage from '../assets/image2.png';
 import veggieButterImage from '../assets/image3.png';

@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import spiceImg1 from '../../assets/cry2.jpg';
 import spiceImg2 from '../../assets/cry2.jpg';
 import spiceImg3 from '../../assets/cry2.jpg';

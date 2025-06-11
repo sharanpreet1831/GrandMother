@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import crypHeroImg from '../../assets/P&B1.jpg'; // Replace with your image path
 import CrypSpicesInfo from './CrypSpicesInfo';
 import CryoGrindingComparison from './CryoGrindingComparison';

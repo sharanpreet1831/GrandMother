@@ -1,5 +1,3 @@
-import React from 'react';
-
 function CookingSection() {
   return (
     <section className="py-16 bg-white">

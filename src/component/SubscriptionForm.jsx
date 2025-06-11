@@ -1,6 +1,3 @@
-import React from 'react';
-import guideCover from '../assets/image3.png';
-
 function SubscriptionForm() {
   return (
     <div className="flex-1 w-full bg-[#2d2d2d] text-white p-8 md:p-6 rounded-2xl shadow-lg relative overflow-hidden animate-fade-in">
