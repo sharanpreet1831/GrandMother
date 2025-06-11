@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './component/Navbar.js';
-import HeroSection from './component/HeroSection.js';
-import BenefitsSection from './component/BenifitsSection.js'
-import CookingSection from './component/CookingSection.js';
-import ProductSection from './component/ProductSection.js';
-import SubscriptionSection from './component/SubscriptionSection.js';
-import ProductAndBenfits from './component/ProductAndBenfits.js';
-import CrypSpices from './component/Cryo Spices/CrypSpices.js';
-import HealthBenfits from './component/Health/HealthBenfits.js';
-import FAQ from './component/FAQ/FAQ.js';
-import Blog from './component/Blog/Blog.js';
-import ContactUs from './component/Contactus/ContactUs.js';
-import BlogDetail from './component/Blog/BlogDetail.js';
+import Navbar from './component/Navbar.jsx';
+import HeroSection from './component/HeroSection.jsx';
+import BenefitsSection from './component/BenifitsSection.jsx'
+import CookingSection from './component/CookingSection.jsx';
+import ProductSection from './component/ProductSection.jsx';
+import SubscriptionSection from './component/SubscriptionSection.jsx';
+import ProductAndBenfits from './component/ProductAndBenfits.jsx';
+import CrypSpices from './component/Cryo Spices/CrypSpices.jsx';
+import HealthBenfits from './component/Health/HealthBenfits.jsx';
+import FAQ from './component/FAQ/FAQ.jsx';
+import Blog from './component/Blog/Blog.jsx';
+import ContactUs from './component/Contactus/ContactUs.jsx';
+import BlogDetail from './component/Blog/BlogDetail.jsx';
 
 function HomePage() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroSection from '../component/ProductAndBenfits/HeroSection';
-import BenefitsSection from '../component/ProductAndBenfits/BenefitsSection';
+import HeroSection from './ProductAndBenfits/HeroSection';
+import BenefitsSection from './ProductAndBenfits/BenefitsSection';
 
 import productImg from '../assets/P&B1.jpg';
 import butterChickenJars from '../assets/image1.png';
