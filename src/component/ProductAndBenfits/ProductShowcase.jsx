@@ -27,7 +27,7 @@ const ProductShowcase = ({ products }) => (
                 src={img.src}
                 alt={img.alt}
                 key={i}
-                className="w-64 h-64 object-cover rounded-xl shadow-lg mb-10"
+                className="w-64 h-84 object-cover rounded-xl shadow-lg mb-10"
                 loading="lazy"
               />
             ))}

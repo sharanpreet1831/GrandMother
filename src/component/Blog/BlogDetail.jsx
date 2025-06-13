@@ -23,7 +23,7 @@ function BlogDetail() {
         <img
           src={new URL(`../../assets/${post.image}`, import.meta.url).href}
           alt={post.title}
-          className="w-full max-w-3xl rounded-xl shadow-lg mb-8 object-cover"
+          className=" max-w-3xl rounded-xl shadow-lg mb-8 object-cover"
           loading="lazy"
         />
       )}

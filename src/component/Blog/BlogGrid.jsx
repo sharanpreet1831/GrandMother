@@ -11,11 +11,11 @@ function BlogGrid() {
             className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col overflow-hidden group"
           >
             {post.image && (
-              <div className="w-full h-44 overflow-hidden rounded-t-lg border-b border-gray-200">
+              <div className="w-full h-64 overflow-hidden  rounded-t-lg border-b border-gray-200">
                 <img
                   src={new URL(`../../assets/${post.image}`, import.meta.url).href}
                   alt={post.title}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  className="w-50 h-full  object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
               </div>
             )}

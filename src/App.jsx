@@ -17,7 +17,7 @@ function HomePage() {
   return (
     <div>
       <HeroSection />
-      <BenefitsSection />
+      {/* <BenefitsSection /> */}
       <CookingSection/>
       <ProductSection/>
      
@@ -35,7 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/ProductAndBenfits" element={<ProductAndBenfits />} />
-        <Route path="/CrypSpices" element={<CrypSpices />} />
+        {/* <Route path="/CrypSpices" element={<CrypSpices />} /> */}
         <Route path="/healthandBenfits" element={<HealthBenfits/>} />
         <Route path="/FAQ" element={<FAQ/>} />
         <Route path="/Blog" element={<Blog/>} />

@@ -10,10 +10,10 @@ function ContactInfo() {
         <div>
           <p className="text-gray-300 font-semibold mb-1">Mobile</p>
           <a
-            href="tel:4168975359"
+            href="tel:8054066066"
             className="text-[#e67e22] hover:underline block"
           >
-            (416) 897-5359
+            +91 8054066066
           </a>
         </div>
 
@@ -21,10 +21,10 @@ function ContactInfo() {
         <div>
           <p className="text-gray-300 font-semibold mb-1">Office</p>
           <a
-            href="tel:19056607694"
+            href="tel:+91 9877739391"
             className="text-[#e67e22] hover:underline block"
           >
-            +1 (905) 660-7694
+            +91 9877739391
           </a>
         </div>
 
@@ -32,10 +32,10 @@ function ContactInfo() {
         <div>
           <p className="text-gray-300 font-semibold mb-1">Email</p>
           <a
-            href="mailto:info@gurusauces.com"
+            href="mailto:gurufoodproductsrajpura@gmail.com"
             className="text-[#e67e22] hover:underline block"
           >
-            info@gurusauces.com
+            gurufoodproductsrajpura@gmail.com
           </a>
         </div>
 
@@ -43,8 +43,8 @@ function ContactInfo() {
         <div>
           <p className="text-gray-300 font-semibold mb-1">Address</p>
           <p className="text-white">
-            45 Casmir Court, Unit No. 10<br />
-            Concord, ON L4K 4H5, Canada
+            Hari Nagar, Old Rajpura<br />
+            Dist patiala (140401)
           </p>
         </div>
       </div>

@@ -2,34 +2,62 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const faqs = [
   {
-    question: "Why don't the Guru Butter Chicken and Veggie Makhni Sauces contain actual butter?",
-    answer: "Our sauces allow you to add or omit dairy ingredients to control the calories and sodium in your dish. Adding fresh ingredients, such as low-fat cream, milk, yogurt, or non-dairy alternatives, during the cooking process increases the freshness of the dish, giving you options for healthier, low-fat traditional Indian dishes."
+    question: "What types of products does Guru Food Products offer?",
+    answer:
+      "Guru Food Products specializes in manufacturing pickles, sauces, sharbats, and murabbas, all crafted using traditional recipes and high-quality ingredients.",
   },
   {
-    question: "Why does Guru suggest adding fresh coriander stems to his sauces while cooking?",
-    answer: "Adding coriander stems to our sauces releases flavorful juice into the sauce during the cooking process, enhancing the taste of the dish and giving it a fresh, authentic Indian flavour."
+    question: "Are your products made with natural ingredients?",
+    answer:
+      "Yes, we prioritize using natural ingredients in all our products. Our pickles, sauces, sharbats, and murabbas are made without artificial flavors or preservatives.",
   },
   {
-    question: "Why does Guru grind his own spices?",
-    answer: "Our spices are ground using the Cryogenic Spices method, preserving 99% of the flavours and aromas that make our sauces truly authentic. Traditional grinding processes can cause spices to lose up to 50% of their flavour and aroma. At the same time, high-speed grinders used by other brands can produce heat that reduces volatile components and heat-sensitive constituents."
+    question: "How should I store your products?",
+    answer:
+      "It is recommended to store our pickles and sauces in a cool, dry place. Once opened, please refrigerate them to maintain freshness. Sharbats should also be refrigerated after opening.",
   },
   {
-    question: "What kind of vegetable oil is used in Guru Sauces?",
-    answer: "We use Avocado Oil in all of our sauces."
+    question: "Do your products contain any allergens?",
+    answer:
+      "While we strive to provide clear labeling, some of our products may contain common allergens such as mustard seeds or other spices. Please check the ingredient list on the packaging for specific allergen information.",
   },
   {
-    question: "How can I make a better-tasting Korma that’s simple, quick, and bursting with flavour?",
-    answer: "Using Guru Curry Sauce as a base, you can easily prepare fresh Indian dishes like Kormas, Karais, Vindaloos, Madras, and Tikka Masala. Simply mix one cup of Guru Curry Sauce with ½ cup of plain yogurt and cook for 5 minutes to produce a fresh, Korma-style curry sauce full of amazing flavour and aroma."
+    question: "Are your pickles and sauces suitable for vegetarians and vegans?",
+    answer:
+      "Yes, our pickles and sauces are made from plant-based ingredients and are suitable for both vegetarians and vegans. However, please check individual product labels for specific dietary information.",
   },
   {
-    question: "How much additional salt should I add when cooking with Guru Sauces?",
-    answer: "We recommend adding 1 tsp of salt for every 1 pound of meat or vegetables added to the sauce."
+    question: "Can I use your sauces for cooking?",
+    answer:
+      "Absolutely! Our sauces are versatile and can be used as marinades, cooking sauces, or dips, enhancing the flavor of a variety of dishes.",
   },
   {
-    question: "How long will a jar of Guru Sauce last once open?",
-    answer: "Guru Sauces contain no preservatives and are made with only the freshest ingredients and spices. Once opened, store the sauce in the refrigerator and use it within seven days to ensure maximum freshness and flavour."
+    question: "What are the health benefits of your products?",
+    answer:
+      "Our products offer various health benefits, including probiotics from fermented pickles, vitamins and minerals from fruits in sharbats and murabbas, and enhanced flavor for healthier meals.",
+  },
+  {
+    question: "How long is the shelf life of your products?",
+    answer:
+      "The shelf life varies by product. Generally, our pickles and sauces can last for several months when unopened. Please refer to the expiration date on the packaging for specific information.",
+  },
+  {
+    question: "Where can I purchase Guru Food Products?",
+    answer:
+      "Our products are available at select grocery stores and online platforms. Please visit our website or contact us via WhatsApp or email to place an order.",
+  },
+  {
+    question: "Do you offer any bulk purchasing options?",
+    answer:
+      "Yes, we offer bulk purchasing options for retailers and distributors. Please contact our customer service team for more information.",
+  },
+  {
+    question: "How can I provide feedback or ask further questions?",
+    answer:
+      "We value your feedback! You can reach out to us through our website's contact form or by emailing our customer service team. We are here to assist you!",
   },
 ];
+
 
 function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState(null);

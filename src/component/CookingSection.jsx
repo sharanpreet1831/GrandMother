@@ -14,11 +14,12 @@ function CookingSection() {
         
         {/* Text Content */}
         <div className="flex-1 md:max-w-[50%] text-center md:text-left animate-slide-in-right">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6 leading-tight">
-            Elevate Your Cooking with World-Class Restaurant Quality in Your Kitchen
+          <h2 className="text-4xl md:text-3xl font-extrabold text-gray-800 mb-6 leading-tight">
+           ENRICH YOUR MEALS WITH GURU FOOD PRODUCTS PICKLES – AUTHENTIC FLAVOR THAT TRANSFORMS YOUR KITCHEN
+
           </h2>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            We bring the same taste and quality you expect from a fine dining experience into your home. With our expertly crafted and healthy Indian sauces, you can cook a delicious meal in no time.
+           Bring the vibrant and traditional taste of expertly crafted Indian pickles into your home with Guru Food Products. Made with the finest ingredients and authentic recipes, our pickles deliver rich, bold flavors that add a restaurant-quality touch to every meal—making your dining experience truly exceptional and effortless.
           </p>
           <button className="bg-red-600 text-white py-3 px-6 rounded-lg text-base uppercase font-semibold transition-colors duration-300 hover:bg-red-700">
             Why Guru Indian Sauces?

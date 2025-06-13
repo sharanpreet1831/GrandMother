@@ -19,7 +19,7 @@ function Navbar() {
             className="w-[52px] h-[52px] object-cover rounded-lg border-2 border-[#b88953] shadow"
           />
           <span className="text-lg font-serif font-bold text-[#7c4a03] select-none tracking-wide uppercase">
-            Curry Sauce Co.
+           Guru Food Product
           </span>
         </div>
 
@@ -43,7 +43,7 @@ function Navbar() {
           {[
             { label: 'Home', path: '/' },
             { label: 'Products & Benefits', path: '/ProductAndBenfits' },
-            { label: 'Cryogenic Spices', path: '/CrypSpices' },
+            // { label: 'Cryogenic Spices', path: '/CrypSpices' },
             { label: 'Health Benefits', path: '/healthandBenfits' },
             { label: 'About', path: '#' },
             { label: 'FAQ', path: '/FAQ' },
@@ -81,7 +81,7 @@ function Navbar() {
           {[
             { label: 'Home', path: '/' },
             { label: 'Products & Benefits', path: '/ProductAndBenfits' },
-            { label: 'Cryogenic Spices', path: '/CrypSpices' },
+            // { label: 'Cryogenic Spices', path: '/CrypSpices' },
             { label: 'Health Benefits', path: '/healthandBenfits' },
             { label: 'About', path: '#' },
             { label: 'FAQ', path: '/FAQ' },

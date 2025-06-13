@@ -25,35 +25,9 @@ function SubscriptionForm() {
           and clean eating tips straight to your inbox.
         </p>
 
-        {/* Subscription Form */}
-        <form className="flex flex-col gap-4" onSubmit={e => e.preventDefault()} aria-label="Subscription Form">
-          <input
-            type="text"
-            placeholder="Your Name *"
-            required
-            className="p-3 rounded-md bg-white text-gray-900 border border-gray-300 placeholder-gray-500 focus:ring-2 focus:ring-orange-400 outline-none"
-          />
-          <input
-            type="tel"
-            placeholder="Phone Number *"
-            required
-            className="p-3 rounded-md bg-white text-gray-900 border border-gray-300 placeholder-gray-500 focus:ring-2 focus:ring-orange-400 outline-none"
-          />
-          <input
-            type="email"
-            placeholder="Email *"
-            required
-            className="p-3 rounded-md bg-white text-gray-900 border border-gray-300 placeholder-gray-500 focus:ring-2 focus:ring-orange-400 outline-none"
-          />
-          <button
-            type="submit"
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-md transition-colors duration-300 shadow-md uppercase"
-          >
-            Submit
-          </button>
-        </form>
+       
 
-        {/* Guide Preview */}
+       
        
       </div>
     </div>
