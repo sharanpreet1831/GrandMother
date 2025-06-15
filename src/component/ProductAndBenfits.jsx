@@ -15,6 +15,9 @@ import CONTINENTALSAUCE from '../assets/continental.jpg'
 import ROSESHARBAT from '../assets/no3.jpg'
 import ORANGESHARBAT from '../assets/orange.jpg'
 import MANGOPICKLE from '../assets/mango.jpg'
+import AMLAMURABBA from '../assets/amala.jpg'
+import REDCHILLISAUCE from '../assets/redchilli.jpeg'
+import APPLEMURABBA from '../assets/applemurabba.jpg'
 
 const products = [
   {
@@ -104,6 +107,22 @@ const products = [
   ]
 },
 {
+  title: "RED CHILLI SAUCE",
+  points: [
+    "RICH IN CAPSAICIN: The active compound that gives red chillies their heat and offers multiple therapeutic benefits.",
+    "BOOSTS METABOLISM: Capsaicin may enhance metabolic rate, helping with fat burning and potential weight loss.",
+    "ENHANCES DIGESTION: Stimulates digestive enzymes, improving nutrient absorption and gut health.",
+    "ANTI-INFLAMMATORY PROPERTIES: May reduce inflammation and provide relief in conditions like arthritis.",
+    "SUPPORTS HEART HEALTH: Can improve circulation and help lower cholesterol, reducing the risk of heart disease.",
+    "RICH IN VITAMIN C: A good source of vitamin C, which boosts the immune system and supports overall health.",
+    "PAIN RELIEF: Contains natural analgesic properties, aiding in pain relief when consumed or applied.",
+    "AIDS DIABETES MANAGEMENT: May help regulate blood sugar levels and improve insulin response."
+  ],
+  images: [
+    { src: REDCHILLISAUCE, alt: "RED CHILLI SAUCE" }
+  ]
+},
+{
   title: "GURU FOOD PRODUCTS ROSE SHARBAT",
   points: [
     "HYDRATION: Rose Sharbat is a refreshing drink that helps keep you hydrated, especially during hot weather.",
@@ -127,6 +146,36 @@ const products = [
   ],
   images: [
     { "src": ORANGESHARBAT, "alt": "Orange Sharbat Bottle" }
+  ]
+},
+{
+  title: "AMLA MURABBA",
+  points: [
+    "RICH IN VITAMIN C: Amla is one of the richest natural sources of vitamin C, boosting immunity and helping fight infections.",
+    "ANTIOXIDANT PROPERTIES: Packed with antioxidants, Amla helps reduce oxidative stress and supports overall wellness.",
+    "DIGESTIVE HEALTH: Aids digestion, relieves constipation, and promotes nutrient absorption with its natural fiber.",
+    "SKIN & HAIR HEALTH: Improves skin texture, reduces signs of aging, and strengthens hair follicles to prevent hair loss.",
+    "BLOOD SUGAR & HEART SUPPORT: May help regulate blood sugar and reduce cholesterol, supporting heart health.",
+    "WEIGHT MANAGEMENT FRIENDLY: Low in calories and high in fiber, making it ideal for healthy weight management.",
+  ],
+  images: [
+    { src: AMLAMURABBA, alt: "AMLA MURABBA" },
+  ]
+},
+{
+  title: "APPLE MURABBA",
+  points: [
+    "NUTRIENT-RICH: Packed with dietary fiber, vitamin C, and antioxidants that contribute to overall health and well-being.",
+    "HEART HEALTH: Helps reduce cholesterol levels and supports cardiovascular health due to its high fiber and antioxidant content.",
+    "DIGESTIVE HEALTH: Aids digestion and promotes regular bowel movements, preventing constipation.",
+    "WEIGHT MANAGEMENT: Low in calories and high in fiber, making it a filling option to control appetite and support weight loss.",
+    "BLOOD SUGAR CONTROL: The fiber content helps regulate blood sugar levels, making it suitable for people with diabetes.",
+    "BOOSTS IMMUNITY: Rich in vitamin C and antioxidants, it helps strengthen the immune system and ward off infections.",
+    "SKIN HEALTH: Antioxidants in apple murabba support skin rejuvenation and help reduce signs of aging.",
+    "HYDRATION: High water content helps maintain hydration and supports overall body functions."
+  ],
+  images: [
+    { src: APPLEMURABBA, alt: "APPLE MURABBA" }
   ]
 }
 

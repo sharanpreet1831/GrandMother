@@ -15,7 +15,7 @@ function BlogGrid() {
                 <img
                   src={new URL(`../../assets/${post.image}`, import.meta.url).href}
                   alt={post.title}
-                  className="w-50 h-full  object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  className="w-50 mx-auto h-full  object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
               </div>
             )}
