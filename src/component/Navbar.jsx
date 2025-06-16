@@ -73,7 +73,7 @@ function Navbar() {
             { label: 'Home', path: '/' },
             { label: 'Products & Benefits', path: '/ProductAndBenfits' },
             { label: 'Health Benefits', path: '/healthandBenfits' },
-            { label: 'About', path: '#' },
+            { label: 'About', path: '/About' },
             { label: 'FAQ', path: '/FAQ' },
             { label: 'Blog', path: '/Blog' },
           ].map(({ label, path }) => (
@@ -132,7 +132,7 @@ function Navbar() {
             { label: 'Home', path: '/' },
             { label: 'Products & Benefits', path: '/ProductAndBenfits' },
             { label: 'Health Benefits', path: '/healthandBenfits' },
-            { label: 'About', path: '#' },
+            { label: 'About', path: '/About' },
             { label: 'FAQ', path: '/FAQ' },
             { label: 'Blog', path: '/Blog' },
             { label: 'Contact Us', path: '/ContactUs', special: true },

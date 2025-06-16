@@ -12,6 +12,7 @@ import FAQ from './component/FAQ/FAQ.jsx';
 import Blog from './component/Blog/Blog.jsx';
 import ContactUs from './component/Contactus/ContactUs.jsx';
 import BlogDetail from './component/Blog/BlogDetail.jsx';
+import About from './component/About.jsx';
 
 function HomePage() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/FAQ" element={<FAQ/>} />
         <Route path="/Blog" element={<Blog/>} />
         <Route path="/ContactUs" element={<ContactUs/>} />
+        <Route path="/About" element={<About/>} />
 
 
 
