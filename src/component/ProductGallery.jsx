@@ -6,7 +6,7 @@ import no3 from '../assets/no3.jpg';
 import { Link } from 'react-router-dom';
 
 const productDetails = {
-  'CHILI PICKLE': [
+  'CHILLI PICKLE': [
     "RICH & CREAMY: A luxurious sauce with authentic Indian spices.",
     "PROTEIN-PACKED: Great source of protein when paired with chicken.",
     "READY TO USE: Quick meal solution with restaurant-style taste.",
@@ -84,7 +84,7 @@ function ProductGallery() {
             style={{
               boxShadow: '0 6px 24px #bfffc6',
             }}
-            onClick={() => setSelectedProduct(product.name)}
+            onClick={() => setSelectedProduct(product?.name)}
           >
             {/* Product name in theme color */}
             <div className="w-full text-center py-2" style={{ background: "#fff" }}>
