@@ -51,7 +51,7 @@ function CookingSection() {
           </p>
           <button
           onClick={()=> {navigate('/healthandBenfits'); window.scrollTo({ top: 0, behavior: 'smooth' });}}
-            className="py-3 px-6 rounded-lg text-base uppercase font-semibold transition-colors duration-300 shadow"
+            className="shine-btn relative overflow-hidden rounded-full px-6 py-3 font-serif text-sm font-normal uppercase text-white bg-gradient-to-r from-green-600 to-green-400 shadow-[0_2px_10px_rgba(0,128,0,0.2)] transition-all duration-200"
             style={{
               background: `linear-gradient(90deg, ${mainGreen} 60%, ${accentGreen} 100%)`,
               color: "#fff",

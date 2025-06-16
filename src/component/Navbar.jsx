@@ -100,7 +100,7 @@ function Navbar() {
           <li>
             <button
               onClick={()=>{navigate('/ContactUs');window.scrollTo({ top: 0, behavior: 'smooth' });}}
-              className="text-sm font-normal font-serif uppercase px-4 py-1 rounded-full shadow transition-all duration-200"
+              className="shine-btn relative overflow-hidden rounded-full px-4 py-1 font-serif text-sm font-normal uppercase text-white bg-gradient-to-r from-green-600 to-green-400 shadow-[0_2px_10px_rgba(0,128,0,0.2)] transition-all duration-200"
               style={{
                 color: "#fff",
                 background: `linear-gradient(90deg, ${mainGreen}, ${accentGreen})`,

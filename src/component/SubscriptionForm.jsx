@@ -50,8 +50,7 @@ function SubscriptionForm() {
 
         <button
           onClick={() => {navigate('/Blog');window.scrollTo({ top: 0, behavior: 'smooth' });}}
-          className="px-6 py-2 rounded-full font-bold text-white shadow-lg transition
-                     hover:scale-105 focus:outline-none"
+          className="shine-btn relative overflow-hidden rounded-full px-6 py-2 font-serif text-sm font-normal uppercase text-white bg-gradient-to-r from-green-600 to-green-400 shadow-[0_2px_10px_rgba(0,128,0,0.2)] transition-all duration-200"
           style={{
             background: `linear-gradient(90deg, ${mainGreen} 70%, ${accentGreen} 100%)`,
             boxShadow: `0 2px 12px ${mainGreen}33`,
