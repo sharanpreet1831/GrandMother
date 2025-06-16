@@ -29,7 +29,7 @@ function ProductGallery() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const products = [
-    { name: 'CHILI PICKLE', image: no1 },
+    { name: 'CHILLI PICKLE', image: no1 },
     { name: 'LEMON PICKLE', image: no2 },
     { name: 'ROSE SHARBAT', image: no3 },
   ];
