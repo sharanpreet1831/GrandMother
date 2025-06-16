@@ -78,36 +78,61 @@ function ProductGallery() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         {products.map((product, index) => (
-          <div
-            key={index}
-            className="rounded-2xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer"
-            style={{
-              boxShadow: '0 6px 24px #bfffc6',
-            }}
-            onClick={() => setSelectedProduct(product?.name)}
-          >
-            {/* Product name in theme color */}
-            <div className="w-full text-center py-2" style={{ background: "#fff" }}>
-              <span
-                className="text-xl font-bold uppercase"
-                style={{
-                  color: mainGreen,
-                  letterSpacing: "1px"
-                }}
-              >
-                {product.name}
-              </span>
+          <div key={index}>
+            <div
+              className="rounded-2xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer"
+              style={{ boxShadow: '0 6px 24px #bfffc6' }}
+              onClick={() => setSelectedProduct(selectedProduct === product.name ? null : product.name)}
+            >
+              <div className="w-full text-center py-2" style={{ background: "#fff" }}>
+                <span
+                  className="text-xl font-bold uppercase"
+                  style={{
+                    color: mainGreen,
+                    letterSpacing: "1px"
+                  }}
+                >
+                  {product.name}
+                </span>
+              </div>
+              <ProductItem name={product.name} image={product.image} />
             </div>
-            <ProductItem name={product.name} image={product.image} />
+
+            {/* Mobile-only details shown inline after the product */}
+            {selectedProduct === product.name && (
+              <div className="mt-4 rounded-xl p-4 shadow-inner bg-white md:hidden">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-bold" style={{ color: mainGreen }}>
+                    {product.name} <span style={{ color: accentGreen }}>Benefits</span>
+                  </h3>
+                  <button
+                    onClick={() => setSelectedProduct(null)}
+                    className="font-medium hover:underline px-3 py-1 rounded-full"
+                    style={{
+                      color: "#fff",
+                      background: "#d32f2f",
+                      boxShadow: "0 2px 8px #f8bbd011",
+                      border: "none"
+                    }}
+                  >
+                    Close
+                  </button>
+                </div>
+                <ul className="list-disc list-inside space-y-1" style={{ color: deepGreen }}>
+                  {productDetails[product.name].map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         ))}
       </div>
 
-      {/* Product Details Section */}
+
+      {/* Desktop-only details at the bottom */}
       {selectedProduct && (
-        <div
-          className="mt-12 rounded-xl p-6 shadow-inner"
-        >
+        <div className="mt-12 rounded-xl p-6 shadow-inner hidden md:block">
           <div className="flex justify-between items-center mb-4">
             <h3
               className="text-2xl font-bold"
@@ -116,10 +141,7 @@ function ProductGallery() {
                 textShadow: `0 2px 6px #bfffc6`
               }}
             >
-              <span style={{ color: mainGreen }}>
-                {selectedProduct}
-              </span>
-              <span style={{ color: accentGreen }}> Benefits</span>
+              <span>{selectedProduct}</span> <span style={{ color: accentGreen }}>Benefits</span>
             </h3>
             <button
               onClick={() => setSelectedProduct(null)}
@@ -135,13 +157,14 @@ function ProductGallery() {
             </button>
           </div>
           <ul className="list-disc list-inside space-y-2"
-              style={{ color: deepGreen, fontWeight: 500, fontSize: "1.08rem" }}>
+            style={{ color: deepGreen, fontWeight: 500, fontSize: "1.08rem" }}>
             {productDetails[selectedProduct].map((point, idx) => (
               <li key={idx}>{point}</li>
             ))}
           </ul>
         </div>
       )}
+
     </div>
   );
 }

@@ -135,7 +135,6 @@ function Navbar() {
             { label: 'About', path: '/About' },
             { label: 'FAQ', path: '/FAQ' },
             { label: 'Blog', path: '/Blog' },
-            { label: 'Contact Us', path: '/ContactUs', special: true },
           ].map(({ label, path, special }) => (
             <Link
               key={label}
@@ -161,6 +160,18 @@ function Navbar() {
               {label}
             </Link>
           ))}
+          <button
+              onClick={()=>{navigate('/ContactUs');window.scrollTo({ top: 0, behavior: 'smooth' });}}
+              className="shine-btn relative overflow-hidden rounded-full px-6 py-3 font-serif text-sm font-normal uppercase text-white bg-gradient-to-r from-green-600 to-green-400 shadow-[0_2px_10px_rgba(0,128,0,0.2)] transition-all duration-200"
+              style={{
+                color: "#fff",
+                background: `linear-gradient(90deg, ${mainGreen}, ${accentGreen})`,
+                boxShadow: `0 2px 10px ${mainGreen}33`,
+                fontWeight: 700,
+              }}
+            >
+              Contact Us
+            </button>
         </div>
       )}
     </nav>
