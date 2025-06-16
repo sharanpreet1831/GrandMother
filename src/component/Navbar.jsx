@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logoImage from '../assets/logoImage.jpeg';
+import greenlogo from '../assets/greenlogo.jpg'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,12 @@ function Navbar() {
   const deepGreen = "#014421";
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const closeMenu = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsOpen(false)
+  };
+
+  const navigate = useNavigate();
 
   return (
     <nav
@@ -26,12 +32,12 @@ function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
-            src={logoImage}
+            src={greenlogo}
             alt="Logo"
-            className="w-[52px] h-[52px] object-cover rounded-lg border-2 shadow"
+            className="w-[52px] h-[52px] object-cover rounded-lg border-0.1 shadow"
             style={{
               borderColor: mainGreen,
-              boxShadow: `0 2px 10px ${mainGreen}33`,
+              boxShadow: `0 1px 10px ${mainGreen}33`,
             }}
           />
           <span
@@ -72,8 +78,8 @@ function Navbar() {
             { label: 'Blog', path: '/Blog' },
           ].map(({ label, path }) => (
             <li key={label}>
-              <Link
-                to={path}
+              <button
+                onClick={()=>{navigate(path); window.scrollTo({ top: 0, behavior: 'smooth' });}}
                 className="text-sm font-normal font-serif uppercase px-2 py-1 rounded transition-colors duration-200"
                 style={{
                   color: deepGreen,
@@ -88,12 +94,12 @@ function Navbar() {
                 >
                   {label}
                 </span>
-              </Link>
+              </button>
             </li>
           ))}
           <li>
-            <Link
-              to="/ContactUs"
+            <button
+              onClick={()=>{navigate('/ContactUs');window.scrollTo({ top: 0, behavior: 'smooth' });}}
               className="text-sm font-normal font-serif uppercase px-4 py-1 rounded-full shadow transition-all duration-200"
               style={{
                 color: "#fff",
@@ -103,7 +109,7 @@ function Navbar() {
               }}
             >
               Contact Us
-            </Link>
+            </button>
           </li>
         </ul>
       </div>

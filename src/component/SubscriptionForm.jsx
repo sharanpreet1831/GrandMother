@@ -1,8 +1,13 @@
+import { useNavigate } from 'react-router-dom';
+
 function SubscriptionForm() {
   // Theme colors
   const mainGreen = "#008000";
   const accentGreen = "#34a853";
   const lightGreen = "#e6ffe6";
+
+  // FIX: get the navigate function from react-router-dom
+  const navigate = useNavigate();
 
   return (
     <div
@@ -29,26 +34,32 @@ function SubscriptionForm() {
             letterSpacing: "1px",
           }}
         >
-          Ready to Find the Best Indian Curry Sauces?
+          Ready to Find the Best Indian Pickle and Sauces?
         </h2>
 
         <p className="text-base" style={{ color: lightGreen }}>
-          Download our exclusive guide:
-          <strong style={{ color: accentGreen }}> "Ten Tips to Finding the Best Indian Curry Sauces"</strong>.
-          Discover how to choose quality, flavor-packed sauces for your next dish.
+          <strong style={{ color: "white" }}> Finding the best indian pickles</strong>.
         </p>
 
         <h3
           className="text-xl font-semibold"
           style={{ color: accentGreen, letterSpacing: "0.5px" }}
         >
-          Get Exclusive Tips, Discounts & Recipes!
+          Get Exclusive Tips & Recipes!
         </h3>
 
-        <p className="text-sm" style={{ color: mainGreen }}>
-          Sign up for our newsletter to receive healthy Indian sauce recipes, special promos,
-          and clean eating tips straight to your inbox.
-        </p>
+        <button
+          onClick={() => {navigate('/Blog');window.scrollTo({ top: 0, behavior: 'smooth' });}}
+          className="px-6 py-2 rounded-full font-bold text-white shadow-lg transition
+                     hover:scale-105 focus:outline-none"
+          style={{
+            background: `linear-gradient(90deg, ${mainGreen} 70%, ${accentGreen} 100%)`,
+            boxShadow: `0 2px 12px ${mainGreen}33`,
+            letterSpacing: "1px"
+          }}
+        >
+          Get Exclusive Tips & Recipes!
+        </button>
       </div>
     </div>
   );

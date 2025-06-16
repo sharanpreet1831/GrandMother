@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 function CookingSection() {
   // Theme colors
   const mainGreen = "#008000";
   const accentGreen = "#34a853";
   const lightGreen = "#e6ffe6";
-
+  const navigate = useNavigate()
   return (
     <section
       className="py-16"
@@ -48,6 +50,7 @@ function CookingSection() {
             Bring the vibrant and traditional taste of expertly crafted Indian pickles into your home with Guru Food Products. Made with the finest ingredients and authentic recipes, our pickles deliver rich, bold flavors that add a restaurant-quality touch to every meal—making your dining experience truly exceptional and effortless.
           </p>
           <button
+          onClick={()=> {navigate('/healthandBenfits'); window.scrollTo({ top: 0, behavior: 'smooth' });}}
             className="py-3 px-6 rounded-lg text-base uppercase font-semibold transition-colors duration-300 shadow"
             style={{
               background: `linear-gradient(90deg, ${mainGreen} 60%, ${accentGreen} 100%)`,
@@ -56,7 +59,7 @@ function CookingSection() {
               boxShadow: `0 2px 10px ${mainGreen}33`,
             }}
           >
-            Why Guru Indian Sauces?
+            Why Guru Food Product ?
           </button>
         </div>
         

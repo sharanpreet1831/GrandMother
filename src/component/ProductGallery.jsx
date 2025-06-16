@@ -64,7 +64,7 @@ function ProductGallery() {
         </h2>
         <Link
           to={'/ProductAndBenfits'}
-          className="font-semibold hover:underline px-4 py-2 rounded-full transition"
+          className="font-normal md:font-semibold w-[40%] md:w-auto hover:underline px-2 py-2 rounded-full transition"
           style={{
             color: "#fff",
             background: `linear-gradient(90deg, ${mainGreen} 60%, ${accentGreen} 100%)`,
