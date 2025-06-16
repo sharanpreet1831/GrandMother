@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 
 const faqs = [
   {
@@ -58,14 +58,14 @@ const faqs = [
   },
 ];
 
-
 function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState(null);
-
-  // For smooth height animation, we store refs to each answer container
   const refs = useRef([]);
 
-  // Toggles the open index, collapsing if clicking the same question
+  const mainGreen = "#008000";
+  const accentGreen = "#34a853";
+  const lightGreen = "#e6ffe6";
+
   const handleToggle = idx => {
     setOpenIndex(openIndex === idx ? null : idx);
   };
@@ -81,23 +81,30 @@ function FAQAccordion() {
         return (
           <div
             key={idx}
-            className={`mb-5 rounded-lg border border-gray-200 shadow-sm bg-white transition-shadow duration-300
+            className={`mb-5 rounded-lg border shadow-sm bg-white transition-shadow duration-300
               ${isOpen ? 'shadow-lg' : 'hover:shadow-md'}
             `}
+            style={{
+              borderColor: accentGreen,
+              background: isOpen ? lightGreen : "#fff"
+            }}
           >
             <button
               onClick={() => handleToggle(idx)}
               aria-expanded={isOpen}
               aria-controls={`faq-answer-${idx}`}
               id={`faq-question-${idx}`}
-              className="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-gray-800 rounded-t-lg
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2
-                transition-colors duration-200
-                bg-gray-50 hover:bg-gray-100"
+              className="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold rounded-t-lg
+                focus:outline-none focus-visible:ring-2 transition-colors duration-200"
+              style={{
+                color: mainGreen,
+                background: isOpen ? "#eaffea" : "#f6fff6"
+              }}
             >
               {faq.question}
               <svg
-                className={`w-6 h-6 text-orange-500 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                className={`w-6 h-6`}
+                style={{ color: accentGreen, transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }}
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -112,16 +119,17 @@ function FAQAccordion() {
               id={`faq-answer-${idx}`}
               role="region"
               aria-labelledby={`faq-question-${idx}`}
-              className="px-6 overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out bg-orange-50"
+              className="px-6 overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out"
               style={{
                 maxHeight: isOpen
-                  ? refs.current[idx]?.scrollHeight + 32 + 'px' // 32px padding top+bottom
+                  ? refs.current[idx]?.scrollHeight + 32 + 'px'
                   : '0px',
                 opacity: isOpen ? 1 : 0,
+                background: lightGreen
               }}
               ref={el => (refs.current[idx] = el)}
             >
-              <p className="py-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+              <p className="py-4 leading-relaxed" style={{ color: mainGreen }}>{faq.answer}</p>
             </div>
           </div>
         );

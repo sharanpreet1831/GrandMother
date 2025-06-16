@@ -5,27 +5,50 @@ import logoImage from '../assets/logoImage.jpeg';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Green theme colors
+  const mainGreen = "#008000";
+  const accentGreen = "#34a853";
+  const lightGreen = "#e6ffe6";
+  const deepGreen = "#014421";
+
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="bg-white shadow-md border-b border-[#b88953] sticky top-0 z-50">
+    <nav
+      className="shadow-md border-b sticky top-0 z-50"
+      style={{
+        background: `linear-gradient(90deg, #fff 80%, ${lightGreen} 100%)`,
+        borderColor: accentGreen,
+      }}
+    >
       <div className="max-w-screen-xl mx-auto px-4 py-2 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
             src={logoImage}
             alt="Logo"
-            className="w-[52px] h-[52px] object-cover rounded-lg border-2 border-[#b88953] shadow"
+            className="w-[52px] h-[52px] object-cover rounded-lg border-2 shadow"
+            style={{
+              borderColor: mainGreen,
+              boxShadow: `0 2px 10px ${mainGreen}33`,
+            }}
           />
-          <span className="text-lg font-serif font-bold text-[#7c4a03] select-none tracking-wide uppercase">
-           Guru Food Product
+          <span
+            className="text-lg font-serif font-bold select-none tracking-wide uppercase"
+            style={{
+              color: deepGreen,
+              letterSpacing: "2px",
+              textShadow: `0 1px 8px ${lightGreen}`,
+            }}
+          >
+            Guru Food Product
           </span>
         </div>
 
         {/* Hamburger for Mobile */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-[#7c4a03] focus:outline-none">
+          <button onClick={toggleMenu} className="focus:outline-none" style={{ color: deepGreen }}>
             {isOpen ? (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -43,7 +66,6 @@ function Navbar() {
           {[
             { label: 'Home', path: '/' },
             { label: 'Products & Benefits', path: '/ProductAndBenfits' },
-            // { label: 'Cryogenic Spices', path: '/CrypSpices' },
             { label: 'Health Benefits', path: '/healthandBenfits' },
             { label: 'About', path: '#' },
             { label: 'FAQ', path: '/FAQ' },
@@ -52,16 +74,33 @@ function Navbar() {
             <li key={label}>
               <Link
                 to={path}
-                className="text-sm font-normal font-serif uppercase text-[#7c4a03] px-2 py-1 rounded hover:bg-[#f8f4ee] hover:text-[#a15d0d] transition-colors duration-200"
+                className="text-sm font-normal font-serif uppercase px-2 py-1 rounded transition-colors duration-200"
+                style={{
+                  color: deepGreen,
+                  fontWeight: 600,
+                }}
               >
-                {label}
+                <span
+                  className="hover:underline"
+                  style={{
+                    transition: "color 0.2s",
+                  }}
+                >
+                  {label}
+                </span>
               </Link>
             </li>
           ))}
           <li>
             <Link
               to="/ContactUs"
-              className="text-sm font-normal font-serif uppercase text-white bg-[#7c4a03] px-4 py-1 rounded-full shadow hover:bg-[#a15d0d] transition-all duration-200"
+              className="text-sm font-normal font-serif uppercase px-4 py-1 rounded-full shadow transition-all duration-200"
+              style={{
+                color: "#fff",
+                background: `linear-gradient(90deg, ${mainGreen}, ${accentGreen})`,
+                boxShadow: `0 2px 10px ${mainGreen}33`,
+                fontWeight: 700,
+              }}
             >
               Contact Us
             </Link>
@@ -71,8 +110,13 @@ function Navbar() {
 
       {/* Mobile Fullscreen Menu */}
       {isOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col items-center justify-center gap-6 px-6 py-12">
-          <button onClick={closeMenu} className="absolute top-6 right-6 text-[#7c4a03]">
+        <div
+          className="md:hidden fixed top-0 left-0 w-full h-screen z-40 flex flex-col items-center justify-center gap-6 px-6 py-12"
+          style={{
+            background: `linear-gradient(135deg, #fff 60%, ${lightGreen} 100%)`,
+          }}
+        >
+          <button onClick={closeMenu} className="absolute top-6 right-6" style={{ color: mainGreen }}>
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -81,7 +125,6 @@ function Navbar() {
           {[
             { label: 'Home', path: '/' },
             { label: 'Products & Benefits', path: '/ProductAndBenfits' },
-            // { label: 'Cryogenic Spices', path: '/CrypSpices' },
             { label: 'Health Benefits', path: '/healthandBenfits' },
             { label: 'About', path: '#' },
             { label: 'FAQ', path: '/FAQ' },
@@ -92,11 +135,22 @@ function Navbar() {
               key={label}
               to={path}
               onClick={closeMenu}
-              className={`text-lg uppercase font-serif ${
+              className={`text-lg uppercase font-serif font-bold transition-all ${
                 special
-                  ? 'bg-[#7c4a03] text-white px-6 py-2 rounded-full shadow hover:bg-[#a15d0d]'
-                  : 'text-[#7c4a03] hover:text-[#a15d0d]'
+                  ? ''
+                  : ''
               }`}
+              style={{
+                color: special ? "#fff" : mainGreen,
+                background: special
+                  ? `linear-gradient(90deg, ${mainGreen}, ${accentGreen})`
+                  : "transparent",
+                padding: special ? "10px 36px" : "0px",
+                borderRadius: special ? "9999px" : "0px",
+                boxShadow: special ? `0 2px 10px ${mainGreen}33` : "none",
+                marginTop: special ? "1rem" : 0,
+                marginBottom: special ? "1rem" : 0,
+              }}
             >
               {label}
             </Link>

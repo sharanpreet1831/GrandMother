@@ -12,7 +12,7 @@ function ContactUs() {
 
         {/* Contact Info */}
         <div className="flex-1 min-w-[280px] md:max-w-full">
-          <h2 className="text-[#d44c23] text-[1.5rem] font-semibold mb-5">
+          <h2 className="text-[#23d443] text-[1.5rem] font-semibold mb-5">
             Get in Touch
           </h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
@@ -23,13 +23,13 @@ function ContactUs() {
               <strong>Email: </strong>
               <a
                 href="mailto:gurufoodproductsrajpura@gmail.com"
-                className="text-[#d44c23] hover:underline "
+                className="text-[#26d423] hover:underline "
               >gurufoodproductsrajpura@gmail.com
               </a>
             </li>
             <li>
               <strong>Phone: </strong>
-              <a href="tel:+91 8054066066" className="text-[#d44c23] hover:underline">
+              <a href="tel:+91 8054066066" className="text-[#38d423] hover:underline">
                 +91 8054066066
               </a>
             </li>
